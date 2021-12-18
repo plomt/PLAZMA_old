@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Parameter: Temperature</h1>
+
+    <p>Define material temperature.
+        Input: Temperature (in Kelvin) of the material for Doppler-broadening preprocessor
+    </p>
+
+    <p>
+        More info about temperatures:
+        <a href="https://serpent.vtt.fi/mediawiki/index.php/Input_syntax_manual#mat_tmp">Material temperature</a>
+        <br>
+        More info about Doppler-broadening preprocessor routine:
+        <a href="https://serpent.vtt.fi/mediawiki/index.php/Doppler-broadening_preprocessor_routine">Doppler-broadening preprocessor routine</a>
+    </p>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form }}
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock %}

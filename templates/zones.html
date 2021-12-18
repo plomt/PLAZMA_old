@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Parameter: Zones</h1>
+
+    <figure>
+        <img src="static/img/hexyc.png" alt="hexyc" width="50%" height="50%" align="right"/>
+    </figure>
+
+    <p>Define a surface.
+        <br>
+        Type: hexyc - infinite hexagonal prism parallel to z-axis, centred at (x0,y0), flat surface perpendicular to y-axis, half-width d
+        <br>
+        Input: param (x0, y0, d)
+    </p>
+
+    <p>
+    More info about surfaces:
+    <a href="https://serpent.vtt.fi/mediawiki/index.php/Surface_types">Surface types</a>
+    </p>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}

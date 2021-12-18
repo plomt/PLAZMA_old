@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Parameter: Pins</h1>
+
+    <figure>
+        <img src="static/img/pins_example.jpg" alt="pins" width="50%" height="50%" align="right"/>
+    </figure>
+
+    <p>Define pins.
+        <br>
+        The pin card defines an entire universe consisting of nested annular material regions. The boundaries are defined by axially infinite cylindrical surfaces. The outermost region is radially infinite.
+        Input: outer radii
+    </p>
+
+    <p>
+        More info about pins:
+        <a href="https://serpent.vtt.fi/mediawiki/index.php/Input_syntax_manual#pin_.28pin_geometry_definition.29">Pin (geometry definition)</a>
+    </p>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+        {{ form }}
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock %}
