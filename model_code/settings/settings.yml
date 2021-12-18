@@ -1,0 +1,13 @@
+POSTGRES:
+    CREDENTIALS_PATH: 'C:\Users\pavel\PycharmProjects\UIR\model_code\settings\pstgrs.yml'
+
+TABLENAMES_POSTGRES:
+    data: 'uir.data'
+    predicts: 'uir.predicts'
+
+PATHS:
+    SCRIPTS_PATH: 'C:\Users\pavel\PycharmProjects\UIR\model_code\sql'
+    DATA_PATH: 'C:\Users\pavel\PycharmProjects\UIR\data'
+
+MODEL:
+    model_file:
